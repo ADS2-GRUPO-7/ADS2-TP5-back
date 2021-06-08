@@ -6,6 +6,11 @@ personaCtrl.getAllPersona = async (req, res) => {
     res.json(persona);
 }
 
+personaCtrl.getPorDni= async (req, res) => {
+    var persona = await Persona.find(req.params);
+    res.json(persona);
+}
+
 personaCtrl.createPersona = async (req, res) => {
     var persona = new Persona(req.body);
     console.log(persona)

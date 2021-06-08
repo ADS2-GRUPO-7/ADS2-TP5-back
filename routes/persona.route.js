@@ -11,6 +11,6 @@ router.post('/', personaCtrl.createPersona);
 router.get('/:id', personaCtrl.getPersona);
 router.put('/:id', personaCtrl.editPersona);
 router.delete('/:id', personaCtrl.deletePersona);
-
+router.get('/dni/:dni', personaCtrl.getPorDni);
 //exportamos el modulo de rutas
 module.exports = router;

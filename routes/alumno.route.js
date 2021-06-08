@@ -11,5 +11,6 @@ router.post('/', alumnoCtrl.createAlumno);
 router.get('/:id', alumnoCtrl.getAlumno);
 router.put('/:id', alumnoCtrl.editAlumno);
 router.delete('/:id', alumnoCtrl.deleteAlumno);
+router.get('/persona/:idPersona', alumnoCtrl.getPorIdPersona);
 //exportamos el modulo de rutas
 module.exports = router;
