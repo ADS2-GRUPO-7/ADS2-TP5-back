@@ -6,7 +6,7 @@ const arancelCtrl = {}
 
 arancelCtrl.getAllArancel = async (req, res) => {
     var arancel = await Arancel.find().populate('idUsuario').populate('idAlumno').exec();
-    console.log(arancel)
+    /* console.log(arancel) */
     res.json(arancel);
 }
 

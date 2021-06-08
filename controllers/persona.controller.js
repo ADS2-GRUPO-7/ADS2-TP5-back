@@ -13,7 +13,7 @@ personaCtrl.getPorDni= async (req, res) => {
 
 personaCtrl.createPersona = async (req, res) => {
     var persona = new Persona(req.body);
-    console.log(persona)
+    /* console.log(persona) */
     try {
         await persona.save();
         res.json({
@@ -21,7 +21,7 @@ personaCtrl.createPersona = async (req, res) => {
             'msg': 'persona guardado.'
         })
     } catch (error) {
-        console.log(error)
+        /* console.log(error) */
         res.json({
             'status': '0',
             'msg': 'Error procesando operacion.'

@@ -9,7 +9,7 @@ cursoCtrl.getAllCurso = async (req, res) => {
 
 cursoCtrl.createCurso = async (req, res) => {
     var curso = new Curso(req.body);
-    console.log(curso)
+    /* console.log(curso) */
     try {
         await curso.save();
         res.json({
