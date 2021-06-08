@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-const alumnoModel = require('./persona');
+const alumnoModel = require('./alumno');
 const {Schema} = mongoose;
-/* const persona = mongoose.model('persona');
-const personaModel = require('../models/persona') */
 
 
 const AlumnoSchema = new Schema({

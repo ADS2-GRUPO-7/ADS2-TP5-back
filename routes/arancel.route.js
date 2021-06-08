@@ -11,5 +11,6 @@ router.post('/', arancelCtrl.createArancel);
 router.get('/:id', arancelCtrl.getArancel);
 router.put('/:id', arancelCtrl.editArancel);
 router.delete('/:id', arancelCtrl.deleteArancel);
+/* router.get('/completo/', arancelCtrl.getArancelesCompleto); */
 //exportamos el modulo de rutas
 module.exports = router;

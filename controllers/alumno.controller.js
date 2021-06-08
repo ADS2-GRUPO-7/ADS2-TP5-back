@@ -4,7 +4,7 @@ const Persona = require('../models/persona');
 const alumnoCtrl = {}
 
 alumnoCtrl.getAllAlumno = async (req, res) => {
-    var alumno = await Alumno.find();
+    var alumno = await Alumno.find().populate('idPersona').populate('idCurso').populate('idPersonaTutor').exec();
     res.json(alumno);
 }
 

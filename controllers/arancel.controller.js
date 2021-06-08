@@ -1,11 +1,20 @@
 const Arancel = require('../models/arancel');
+/* const Persona = require('../models/persona'); */
+/* const Curso = require('../models/curso'); */
 
 const arancelCtrl = {}
 
 arancelCtrl.getAllArancel = async (req, res) => {
-    var arancel = await Arancel.find();
+    var arancel = await Arancel.find().populate('idUsuario').populate('idAlumno').exec();
+    console.log(arancel)
     res.json(arancel);
 }
+
+/* arancelCtrl.getArancelesCompleto = async (req, res) => {
+    const arancel = await Arancel.find().populate('idAlumno').exec();
+    console.log(pasaje)
+    res.json(arancel);
+} */
 
 arancelCtrl.createArancel = async (req, res) => {
     var arancel = new Arancel(req.body);
