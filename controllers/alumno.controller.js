@@ -9,7 +9,7 @@ alumnoCtrl.getAllAlumno = async (req, res) => {
 }
 
 alumnoCtrl.getPorIdPersona= async (req, res) => {
-    var alumno = await Alumno.find(req.params);
+    var alumno = await Alumno.find(req.params).populate('idPersona').populate('idCurso').populate('idPersonaTutor').exec();
     res.json(alumno);
 }
 
@@ -30,7 +30,7 @@ alumnoCtrl.createAlumno = async (req, res) => {
 }
 
 alumnoCtrl.getAlumno = async (req, res) => {
-    const alumno = await Alumno.findById(req.params.id).populate('idPersona').exec();
+    const alumno = await Alumno.findById(req.params.id).populate('idPersona').populate('idCurso').populate('idPersonaTutor').exec();
     /* console.log(alumno)*/
     res.json(alumno);
 }
