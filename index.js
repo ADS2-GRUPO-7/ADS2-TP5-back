@@ -18,7 +18,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use('/api/persona', require('./routes/persona.route.js'));
 app.use('/api/alumno', require('./routes/alumno.route.js'));
 app.use('/api/usuario', require('./routes/usuario.route'));
-app.use('/api/arancel', require('./routes/arancel.route'));
+app.use('/api/arancel', require('./routes/pago.route'));
 app.use('/api/asistencia', require('./routes/asistencia.route'));
 app.use('/api/curso', require('./routes/curso.route'));
 
